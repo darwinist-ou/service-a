@@ -21,7 +21,7 @@ env:
   GITHUB_SHA: ${{ github.sha }}
   REGISTRY_HOSTNAME: gcr.io
   DEPLOYMENT_NAME: gke-test
-  TLD: m-v-d.com
+  TLD: foo.devops-wizard.com
   # GCP_PROJECT_ID: otters-cc
 
 jobs:
