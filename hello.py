@@ -2,7 +2,10 @@ import os
 import math
 from flask import Flask
 from flask import jsonify
+from flask import render_template
+from flask_cors import CORS
 app = Flask(__name__)
+CORS(app)
 
 @app.route("/")
 def hello():
@@ -17,6 +20,10 @@ def hello():
     else:
         return_dict = {"message": "Hello World"}
     return jsonify(return_dict)
+
+@app.route("/serve_app")
+def serve_app():
+    return render_template("app.html")
 
 @app.route("/healthz")
 def healthz():

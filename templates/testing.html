@@ -1,0 +1,28 @@
+
+   
+<!doctype html>
+<html>
+  <head>
+    <title>axios - get example</title>
+  </head>
+  <body class="container">
+    <h1>axios.get</h1>
+    <div id='output' ></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        axios.get('https://master-service-b.foo.devops-wizard.com/')
+          .then(function (response) {
+            var x = document.getElementById('output');
+            x.innerHTML = '<p>' + response.request.responseText + '</p>';
+            console.log(response);
+          })
+          .catch(function (error) {
+            console.log(error);
+          })
+          .then(function () {
+            // always executed
+          });
+    </script>
+  </body>
+</html>

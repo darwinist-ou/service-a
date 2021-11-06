@@ -21,4 +21,3 @@ items:
             serviceName: $SERVICE_NAME
             servicePort: 80
           path: /
-
